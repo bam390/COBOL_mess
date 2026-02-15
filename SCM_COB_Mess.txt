@@ -1,0 +1,20 @@
+
+
+AA43.  PERFORM KK.
+       IF ITMSTS20 = " " GO TO AAA43.
+       IF ITMSTS20 = "N" AND ITMSTSO (A, SS) = "N".
+       PERFORM A54G THRU X546 GO TO B43.
+       IF ITMSTS20 = "N" PERFORM CC43 PERFORM A54J.
+       MOVE "25" TO ACT40 MOVE ITMSTS20 TO ITMSTS40 GO TO B43.
+       IF ITMSTS70 (A, SS) = "N" GO TO CC43.
+AAA43. PERFORM EQCHEC.
+       IF EQWORK1 = EQWORK2 GO TO QQ43.
+       IF EQWORK1 = SPACES GO TO QQ43.
+       GO TO CC43.
+QQ43.  PERFORM EE THRU KK.
+B43.   PERFORM A54D THRU X54D GO TO D42.
+CC43.  MOVE "40" TO ACT40.
+      ****************************************************** END TEXT *
+      *
+      *
+      *****************************************************************
