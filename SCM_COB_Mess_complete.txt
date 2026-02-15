@@ -1,0 +1,100 @@
+      *  Chapter 6 - Page 117 - Figure 6-3
+      *---------------------------------------------------------------
+      *  COBOL program built from a code snippet from a book:
+      *  Structured COBOL Methods
+      *
+      *  Chapter 6 - Page 117 - Figure 6-3
+      *  "A coding sample from an actual production program"
+      *
+      *  Chapter 6 - The Ten Most Frequently asked Questions
+      *  #5 - "How can I make use of your methods when I have to
+      *  maintain old programs that weren't written that way?"
+      *
+      *  Author: Paul Noll
+      *  Year: 1997
+      *  Publisher: Mike Murach and Associates
+      *---------------------------------------------------------------
+       identification division.
+       program-id. SCMCOBME.
+       environment division.
+       data division.
+       working-storage section.
+       77     ITMSTS20 PIC X.
+       77     ITMSTS40 PIC X.
+
+       01        ITMSTSO-L1.
+           05    ITMSTSO-L5    OCCURS 4 TIMES.
+             10  ITMSTSO       OCCURS 4 TIMES  PIC X.
+
+       01        ITMSTS70-L1.
+           05    ITMSTS70-L5    OCCURS 4 TIMES.
+             10  ITMSTS70       OCCURS 4 TIMES  PIC X.
+
+
+       77  A PIC S9(4) BINARY VALUE 1.
+       77  SS PIC S9(4) BINARY VALUE 1.
+       77  ACT40 PIC XX VALUE "  ".
+
+       77  EQWORK1 PIC X VALUE " ".
+       77  EQWORK2 PIC X VALUE " ".
+
+       procedure division.
+
+      ***********************
+      * Begin Code Snippet  *
+      ***********************
+       AA43.  PERFORM KK.
+              IF ITMSTS20 = " " GO TO AAA43.
+              IF ITMSTS20 = "N" AND ITMSTSO (A, SS) = "N"
+              PERFORM A54G THRU X546 GO TO B43.
+              IF ITMSTS20 = "N" PERFORM CC43 PERFORM A54J.
+              MOVE "25" TO ACT40 MOVE ITMSTS20 TO ITMSTS40 GO TO B43.
+              IF ITMSTS70 (A, SS) = "N" GO TO CC43.
+       AAA43. PERFORM EQCHEC.
+              IF EQWORK1 = EQWORK2 GO TO QQ43.
+              IF EQWORK1 = SPACES GO TO QQ43.
+              GO TO CC43.
+       QQ43.  PERFORM EE THRU KK.
+       B43.   PERFORM A54D THRU X54D GO TO D42.
+       CC43.  MOVE "40" TO ACT40.
+      * ---------------------------------------------
+              Display "End of book text; Ending.".
+              stop run.
+
+      *********************
+      * End Code Snippet  *
+      *********************
+       EE.
+              Display " EE ---".
+
+       KK.
+              Display " KK ---".
+
+       EQCHEC.
+              Display " EQCHEC ---".
+
+       A54J.
+              Display " A54J ---".
+
+      *A54G -- PERFORM A54G THRU X546 -----
+       A54G.
+              Display " A54G ---".
+
+       X546.
+              Display " X546 ---".
+      *X546 -- PERFORM A54G THRU X546 ----
+
+      *A54D -- PERFORM A54D THRU X54D ----
+       A54D.
+              Display " A54D ---".
+
+       X54D.
+              Display " X54D ---".
+      *X54D -- PERFORM A54D THRU X54D ----
+
+       D42.
+              Display " D42 ---".
+
+              Display " Let's end this as label D42 was branched to.".
+              stop run.
+       end program SCMCOBME.
