@@ -2,6 +2,13 @@
 
 COBOL_mess illustrates ways that a program in COBOL should *not* be coded!
 The files are hand-typed from a teribally written COBOL program from a book.
+The original code snippet is only 14 lines long and will not run by itself.
+
+- **SCM_COB_Mess.txt** is the keyed in 14 line code snippet.
+
+- **SCM_COB_Mess_complete.txt** is a compilable program build from the snippet.
+
+
 ## "Structured COBOL Methods" by Paul Noll -- Published by Murach.
 
 ### Page 117 - Chapter 6 - The 10 Most Frequently Asked Questions
