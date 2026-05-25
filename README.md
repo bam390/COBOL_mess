@@ -1,4 +1,4 @@
-# COBOL_mess Crazy Code Example
+# COBOL_mess Crazy Code Example / Antipattern
 
 COBOL_mess illustrates ways that a program in COBOL should *not* be coded!
 The files are hand-typed from a teribally written COBOL program from a book.
